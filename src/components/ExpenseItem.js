@@ -13,7 +13,7 @@ function ExpenseItem(props) {
             </div>
         </div>
         
-    )
+    );
 }
 
 export default ExpenseItem;
