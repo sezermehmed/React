@@ -16,11 +16,11 @@ const ExpenseForm = () => {
   // });
 
   const titleChangeHandler = (event) => {
-    // setUserInput({
+    //setUserInput({
     //   ...userInput,
     //   enteredTitle: event.target.value,
     // });
-    // setEnteredTitle(event.target.value);
+     setEnteredTitle(event.target.value);
     // console.log(enteredTitle)
     // another way
     // setUserInput((prevState) => {
@@ -33,7 +33,7 @@ const ExpenseForm = () => {
     //   ...userInput,
     //   enteredAmount: event.target.value,
     // });
-    //setEnteredAmount(event.target.value);
+    setEnteredAmount(event.target.value);
   };
 
   const dateChangeHandler = (event) => {
@@ -42,9 +42,20 @@ const ExpenseForm = () => {
     //   enteredDate: event.target.value 
     // });
     // console.log(event.target.value)
-    //setEnteredDate(event.target.value);
+    setEnteredDate(event.target.value);
   };
-  const submitHandler = () => {};
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const expenseDate = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+    };
+    console.log(expenseDate)
+  };
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
