@@ -17,9 +17,14 @@ const App = () => {
     { id: "e3", title: "Rent", amount: 66, date: new Date(2022, 6, 16) },
     { id: "e4", title: "School", amount: 166, date: new Date(2022, 2, 115) },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  }
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
