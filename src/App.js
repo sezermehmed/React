@@ -12,10 +12,10 @@ const DUMMY_EXPENSES = [
     id: "e2",
     title: "Car Insurance",
     amount: 294.67,
-    date: new Date(2025, 3, 12),
+    date: new Date(2020, 3, 12),
   },
   { id: "e3", title: "Rent", amount: 66, date: new Date(2022, 6, 16) },
-  { id: "e4", title: "School", amount: 166, date: new Date(2022, 2, 115) },
+  { id: "e4", title: "School", amount: 166, date: new Date(2019, 2, 115) },
 ];
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
